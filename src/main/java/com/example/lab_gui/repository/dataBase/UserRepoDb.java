@@ -38,7 +38,7 @@ public class UserRepoDb implements Repository0<Long, User> {
             String firstName=resultSet.getString("first_name");
             String lastName=resultSet.getString("last_name");
             String passwd=resultSet.getString("password");
-            User user=new User(firstName,lastName,passwd);
+            User user=new User(passwd,firstName,lastName);
             user.setId(id);
             return user;
         }

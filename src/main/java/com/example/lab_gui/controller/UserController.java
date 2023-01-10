@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
@@ -62,13 +63,14 @@ public class UserController {
                 HBox loginLayout=loader.load();
 
                 MenuController userController=loader.getController();
+
                 userController.setService(new Service<>());
                // userController.init();
                 userController.setCurrentUser(service.valid(userName,passwd));
 
 
                 Stage stage=new Stage();
-                Scene scene = new Scene(loginLayout, 650, 400);
+                Scene scene = new Scene(loginLayout, 600, 400);
                 stage.setScene(scene);
                 stage.show();
 
@@ -91,7 +93,21 @@ public class UserController {
     }
 
     public void handleSignIn() throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(HelloApplication.class.getResource("views/sign_up.fxml"));
+        AnchorPane signInLayout=loader.load();
 
+        //MenuController userController=loader.getController();
+        //userController.setService(new Service<>());
+        // userController.init();
+        //serController.setCurrentUser(service.valid(userName,passwd));
+
+        SignUpController signUpController=loader.getController();
+        signUpController.setService(new Service<>());
+        Stage stage=new Stage();
+        Scene scene = new Scene(signInLayout, 250, 400);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

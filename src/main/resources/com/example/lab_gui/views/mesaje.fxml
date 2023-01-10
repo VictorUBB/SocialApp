@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_gui.controller.MessageController">
+   <children>
+      <VBox fx:id="friendsBox" prefHeight="400.0" prefWidth="205.0">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="201.0" style="-fx-background-color: gold;">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="242.0" style="-fx-background-color: gold;" text="Messages" textAlignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="27.0" prefWidth="255.0" style="-fx-background-radius: 15;">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <ListView fx:id="listViewFinds" onMouseClicked="#onClickGetMessages" prefHeight="379.0" prefWidth="80.0" />
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="241.0">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="237.0">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/person.jpg" />
+                     </image></ImageView>
+                  <Label fx:id="userNameLabel" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: gold;" text="User Name">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="331.0" prefWidth="237.0">
+               <content>
+                  <VBox fx:id="mesajeBox" prefHeight="687.0" prefWidth="246.0" />
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="41.0" prefWidth="237.0">
+               <children>
+                  <TextField fx:id="textMsgField" prefHeight="36.0" prefWidth="209.0" promptText="say something...">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin></TextField>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" onMouseClicked="#onEnterAddMsg" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/1604115.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

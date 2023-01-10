@@ -1,5 +1,6 @@
 package com.example.lab_gui.entities;
 
+import java.util.Objects;
 import java.util.PrimitiveIterator;
 
 public class User extends Entity<Long>{
@@ -44,5 +45,18 @@ public class User extends Entity<Long>{
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(passwd, user.passwd) && Objects.equals(first_name, user.first_name) && Objects.equals(last_name, user.last_name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(passwd, first_name, last_name);
     }
 }

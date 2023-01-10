@@ -9,9 +9,10 @@ public class Friendship extends Entity<Long>{
     private LocalDateTime friendsFrom;
 
     private Long status;
-    //1-friens
+    //0-nothing
+    //1-friends
     //2-request send
-    //3-request recive
+    //3-request recived
     @Override
     public String toString() {
         return "id: "+ this.getId() +"Friendship{" +

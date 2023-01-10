@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_gui.controller.SignUpController">
+   <children>
+      <ImageView fitHeight="423.0" fitWidth="278.0" layoutX="-5.0" opacity="0.32" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Untitled.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="firstNameLabel" layoutX="57.0" layoutY="141.0" promptText="First Name" />
+      <TextField fx:id="lastNameLabel" layoutX="57.0" layoutY="186.0" promptText="Last Name" />
+      <Button fx:id="createBtn" layoutX="50.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#onClickCreate" prefHeight="33.0" prefWidth="172.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 5px; -fx-border-radius: 5;" text="Next" textAlignment="CENTER" textFill="#0b0b0b">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <PasswordField fx:id="passwordLabel" layoutX="57.0" layoutY="263.0" promptText="Confirm password" />
+      <PasswordField fx:id="confirmPasswordLabel" layoutX="57.0" layoutY="223.0" promptText="Password" />
+      <Text layoutX="91.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign " wrappingWidth="95.6126708984375">
+         <font>
+            <Font name="Impact" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="139.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="up">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

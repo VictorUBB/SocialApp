@@ -1,6 +1,7 @@
 package com.example.lab_gui;
 
 import com.example.lab_gui.controller.MenuController;
+import com.example.lab_gui.controller.MessageController;
 import com.example.lab_gui.controller.UserController;
 import com.example.lab_gui.service.Service;
 import com.example.lab_gui.validators.UtilizatorValidator;
@@ -32,9 +33,20 @@ public class HelloApplication extends Application {
         UserController userController=fxmlLoader.getController();
         userController.setUp(service);
      //   MenuController menuController=fxmlLoader.getController();
-        Scene scene = new Scene(loginLayout, 650, 400);
+        Scene scene = new Scene(loginLayout, 600, 400);
         stage.setScene(scene);
         stage.show();
+
+
+ /*       Stage stage1=new Stage();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(HelloApplication.class.getResource("views/mesaje.fxml"));
+        HBox layout=loader.load();
+        MessageController messageController=loader.getController();
+
+        Scene scene1=new Scene(layout,600,400);
+        stage1.setScene(scene1);
+        stage1.show();*/
 /*        FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("/views/friend.fxml"));
         HBox root=loader.load();
